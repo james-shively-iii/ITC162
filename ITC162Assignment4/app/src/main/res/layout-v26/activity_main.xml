@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bg_img"
+        android:layout_width="429dp"
+        android:layout_height="746dp"
+        android:contentDescription="background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/temp_bg" />
+
+    <RadioGroup
+        android:id="@+id/tempScales"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tempText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001">
+
+        <RadioButton
+            android:id="@+id/radioC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-smallcaps"
+            android:onClick="onClick"
+            android:text="@string/radioC"
+            android:textColor="#E1000000" />
+
+        <RadioButton
+            android:id="@+id/radioF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-smallcaps"
+            android:onClick="onClick"
+            android:text="@string/radioF"
+            android:textColor="#E1000000" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tempOutput"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="90dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/tempOutput"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/tempText"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Temp?"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265" />
+
+    <Button
+        android:id="@+id/convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="#00A2E8"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="onClick"
+        android:text="Convert"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

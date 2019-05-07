@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Conversion Calculator</string>
+    <string name="radioF">Fahrenheit</string>
+    <string name="radioC">Celsius</string>
+    <string name="tempText">Temperature?</string>
+    <string name="numTemp" />
+    <string name="tempOutput">0.0</string>
+</resources>
